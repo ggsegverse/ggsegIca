@@ -4,10 +4,6 @@
 #' cortical parcellation with 163 regions. Contains 2D polygon geometry
 #' for [ggseg::geom_brain()].
 #'
-#' @docType data
-#' @name ica
-#' @usage data(ica)
-#' @keywords datasets
 #' @family ggseg_atlases
 #'
 #' @references Beckmann CF, Smith SM (2004). Probabilistic Independent
@@ -15,8 +11,8 @@
 #'   Transactions on Medical Imaging*, 23(2):137-152.
 #'   \doi{10.1109/TMI.2003.822821}
 #'
-#' @format A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @return A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @export
 #' @examples
-#' data(ica)
-#' ica
-"ica"
+#' ica()
+ica <- function() .ica
