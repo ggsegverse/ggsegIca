@@ -12,6 +12,7 @@
 #'   \doi{10.1109/TMI.2003.822821}
 #'
 #' @return A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @import ggseg.formats
 #' @export
 #' @examples
 #' ica()
