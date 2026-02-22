@@ -1,10 +1,11 @@
 ---
-output: github_document
+format: gfm
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
+```{r}
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -35,7 +36,8 @@ To learn how to use these atlases, please look at the documentation for [ggseg](
 
 We recommend installing the ggseg-atlases through the ggseg [r-universe](https://ggseg.r-universe.dev/ui#builds):
 
-```{r eval = FALSE}
+```{r}
+#| eval: false
 # Enable this universe
 options(repos = c(
     ggseg = 'https://ggseg.r-universe.dev',
@@ -52,7 +54,8 @@ You can install the released version of ggsegIca from [GitHub](https://github.co
 remotes::install_github("ggseg/ggsegIca")
 ```
 
-```{r, fig.height=7}
+```{r}
+#| fig-height: 7
 library(ggseg)
 library(ggseg3d)
 library(ggsegIca)
@@ -64,27 +67,33 @@ plot(ica()) +
 
 ```
 
-```{r "noneval", eval=FALSE}
+```{r}
+#| label: noneval
+#| eval: false
 library(dplyr)
-ggseg3d(atlas = ica()) %>% 
-  add_glassbrain() %>% 
+ggseg3d(atlas = ica()) |> 
+  add_glassbrain() |> 
   pan_camera("right lateral")
 ```
 
-```{r "orca", include=FALSE}
+```{r}
+#| label: orca
+#| include: false
 library(dplyr)
-p <- ggseg3d(atlas = ica()) %>%
-  add_glassbrain(hemisphere = "left")%>%
-  pan_camera("right lateral") %>%
+p <- ggseg3d(atlas = ica()) |>
+  add_glassbrain(hemisphere = "left")|>
+  pan_camera("right lateral") |>
   plotly::add_annotations( text="Screen capture",
                   legendtitle=TRUE, showarrow=FALSE,
                   font = list(color = "#000000b4",
                               family = 'sans serif',
                               size = 50))
-plotly::orca(p, "man/figures/README-3d-plot.png")
+snapshot_brain("man/figures/README-3d-plot.png")
 ```
 
-```{r "incl", echo=FALSE}
+```{r}
+#| label: incl
+#| echo: false
 knitr::include_graphics("man/figures/README-3d-plot.png")
 ```
 
