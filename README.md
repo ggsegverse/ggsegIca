@@ -64,3 +64,10 @@ ggplot() +
 Please note that the ‘ggsegIca’ project is released with a [Contributor
 Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
 you agree to abide by its terms.
+
+## Data source
+
+ICA annotation files on fsaverage5.
+
+- **Reference**: Beckmann & Smith (2004) [doi:10.1109/TMI.2003.822821](https://doi.org/10.1109/TMI.2003.822821)
+- **Date obtained**: 2021-10-15
