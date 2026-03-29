@@ -16,4 +16,5 @@
 #' @export
 #' @examples
 #' ica()
+#' plot(ica())
 ica <- function() .ica
