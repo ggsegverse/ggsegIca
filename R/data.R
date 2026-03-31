@@ -5,6 +5,7 @@
 #' for [ggseg::geom_brain()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Beckmann CF, Smith SM (2004). Probabilistic Independent
 #'   Component Analysis for Functional Magnetic Resonance Imaging. *IEEE
